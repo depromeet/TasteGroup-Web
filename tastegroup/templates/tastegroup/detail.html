@@ -1,4 +1,6 @@
+{% extends 'tastegroup/layout.html' %}
 {% load staticfiles %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,24 +44,4 @@
         <label>지번 서울특별시 서대문구 창천동 52-78</label>
       </center>
     </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script>
-      var myDataRef = new Firebase('https://tastegroup.firebaseio.com/Restaurants');
-      myDataRef.on('child_added', function(snapshot) {
-        var message = snapshot.val();
-        displayChatMessage(message.Name, message.Phone, message.Photo, message.Price, message.Recommendation, message.Review, message.Seat);
-      });
-      function displayChatMessage(Name, Phone, Photo, Price, Recommendation, Review, Seat) {
-        $('<div/>').css({marginLeft:"12.5%", width:"75%"}).append($('<img>',{id:Photo,src:Photo,innerWidth:"100%",marginLeft:"150px"})).appendTo($('#main'));
-        $('<div/>').css({marginLeft:"12.5%", width:"75%"}).append($('<p>',{align:"center"}).text(Name)).appendTo($('#main'));
-        $('<a href="tel:+821085990681"/>').append($('<p>',{align:"center"}).text("전화하기")).appendTo($('#main'));
-        $('<a href="http://map.naver.com/?dlevel=11&pinType=site&pinId=11590700&x=126.935088&y=37.557929&enc=b64"/>').append($('<p>',{align:"center"}).text("위치")).appendTo($('#main'));
-        $('#main')[0].scrollTop = $('#main')[0].scrollHeight;
-      };
-    </script>
-  </body>
-</html>
+{% endblock content %}
