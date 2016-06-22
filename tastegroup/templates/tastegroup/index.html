@@ -1,7 +1,7 @@
 {% extends 'tastegroup/layout.html' %}
 {% load staticfiles %}
 {% block content %}
-    <div class="jumbotron" style="background-color:white; margin-top:5%">
+    <div class="jumbotron" style="background-color:white; margin-top:15%; position:fixed;">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -32,7 +32,6 @@
               <p>족발에 소주한잔 콜?!</p>
             </div>
           </div>
-          <p>좌우로 스와이프!</p>
         </div>
 
         <!-- Controls -->
@@ -47,7 +46,7 @@
       </div>
 
       <!-- 그리드시스템 -->
-      <div class="row">
+      <div class="row" style="margin-top:15%">
           <div class="col-xs-4">
               <a href="list"><img src="{% static 'img/banner1.png' %}" style="width:100%;"></a>
           </div>
