@@ -73,3 +73,12 @@ img.listImage{
   bottom: -100%;
   left: -100%;
 }
+
+/*footer*/
+#foot{
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:60px;
+   width:100%;
+}
