@@ -1,19 +1,48 @@
 {% extends 'tastegroup/layout.html' %}
 {% load staticfiles %}
 {% block content %}
-    <div class="jumbotron" style="background-color:white; margin-top:15%; position:fixed;">
+    <div class="jumbotron" style="background-color:(240,240,240); margin-top:15%; position:fixed;">
       <div class="row" id='list'>
-        <div class="col-xs-6" style="padding:10px; height:200px">
-          <div class="listBox">
-            <a href="detail">
-              <img src="{% static 'img/rests/01.png' %}" style="width:100%;">
-            </a>
+        <div class="col-xs-12" >
+          <div class="listBox" style="margin:2%; background-color:white;">
+            <div style="margin:10px;">
+              <h5>삼겹살에 소주한잔?</h5>
+            </div>
+            <div style="position: relative; height: 196px; background-color: #888;">
+              <a class="thumb" style="background-image:url('{% static 'img/rests/01.png' %}');">&nbsp;</a>
+            </div>
+            <div style="margin-left:15px;">
+              <h4>신촌 고기창고</h4>
+              <h4 style="color:red;">8,000원~16,000원<span style="font-size:12px;"> /인</span></h4>
+            </div>
+            <hr>
+            <div style="margin-left:15px;">
+              <span>창서초 옆, 10~20명</span>
+            </div>
           </div>
         </div>
-        <div class="col-xs-6" style="padding:10px; height:200px">
+        <div class="col-xs-12" >
+          <div class="listBox" style="margin:2%; background-color:white;">
+            <div style="margin:10px;">
+              <h5>불타는 고기맛</h5>
+            </div>
+            <div style="position: relative; height: 196px; background-color: #888;">
+              <a class="thumb" style="background-image:url('{% static 'img/rests/02.png' %}');">&nbsp;</a>
+            </div>
+            <div style="margin-left:15px;">
+              <h4>신촌 피그팜</h4>
+              <h4 style="color:red;">8,000원~16,000원<span style="font-size:12px;"> /인</span></h4>
+            </div>
+            <hr>
+            <div style="margin-left:15px;">
+              <span>창서초 옆, 20~30명</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12" style="padding:10px;">
           <div class="listBox">
             <a href="detail" class="list">
-              <img src="{% static 'img/rests/01.png' %}" style="width:100%;">
+              <img src="{% static 'img/rests/01.png' %}" style="width:50%;">
             </a>
           </div>
         </div>
